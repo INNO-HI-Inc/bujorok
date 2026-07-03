@@ -90,6 +90,14 @@ async function callClaude(
     .filter((b) => b.type === 'text' && typeof b.text === 'string')
     .map((b) => b.text)
     .join('\n');
+  if (data.stop_reason === 'refusal') {
+    throw new Error('모델이 이 사진의 판독을 거부했습니다. 다른 사진으로 다시 시도해 주세요.');
+  }
+  if (data.stop_reason === 'max_tokens') {
+    throw new Error(
+      '응답이 길어 중간에 잘렸습니다. 한 장에 항목이 너무 많으면 사진을 나눠 찍어 다시 시도해 주세요.',
+    );
+  }
   if (!text.trim()) throw new Error('모델이 응답을 반환하지 않았습니다. 다시 시도해 주세요.');
   return text;
 }

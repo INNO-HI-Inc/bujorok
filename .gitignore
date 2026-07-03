@@ -1,0 +1,5 @@
+node_modules/
+dist/
+licenses/
+*.local
+.DS_Store

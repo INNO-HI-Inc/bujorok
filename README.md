@@ -1,14 +1,33 @@
+<div align="center">
+
 # 부조록 (Bujorok)
 
 **봉투 속 마음을, 기록으로.**
+
+축의금·부의금 봉투와 장부를 촬영하면 AI가 디지털 장부로 만들어 주는 완전 정적 웹앱
+
+![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat-square&logo=vite&logoColor=white)
+![서버 없음](https://img.shields.io/badge/%EC%84%9C%EB%B2%84-%EC%97%86%EC%9D%8C-2EA44F?style=flat-square)
+
+<a href="https://inno-hi-inc.github.io/bujorok/"><img src="docs/hero.jpg" alt="부조록 데모 모드 — 샘플 장부 20건" width="74%"></a>&nbsp;<a href="https://inno-hi-inc.github.io/bujorok/"><img src="docs/mobile.jpg" alt="부조록 모바일 첫 화면" width="21.5%"></a>
+
+<sub>왼쪽: 데모 모드(샘플 데이터 20건) 장부 화면 · 오른쪽: 모바일 첫 화면</sub>
+
+**[바로 써보기](https://inno-hi-inc.github.io/bujorok/)** · API 키 없이 데모 모드로 전체 플로우 체험 가능
+
+</div>
+
+---
 
 결혼식·장례식이 끝난 뒤 남는 손글씨 축의금·부의금 봉투와 장부를 폰으로 촬영해 올리면, AI가
 이름·금액·소속을 인식해 디지털 장부로 만들어 주는 도구입니다. 한자 이름 음차, 세로쓰기,
 `金 五萬원整` 같은 한자 금액까지 판독합니다.
 
-> **프라이버시가 핵심입니다.** 서버가 없는 완전 정적 웹앱으로, 모든 데이터(장부·사진 썸네일·API
-> 키·라이선스)는 사용자의 브라우저(IndexedDB / localStorage)에만 저장됩니다. AI 인식 시에만
-> 압축된 이미지가 브라우저에서 Anthropic API로 **직접** 전송됩니다.
+**프라이버시가 핵심입니다.** 서버가 없는 완전 정적 웹앱으로, 모든 데이터(장부·사진 썸네일·API
+키·라이선스)는 사용자의 브라우저(IndexedDB / localStorage)에만 저장됩니다. AI 인식 시에만
+압축된 이미지가 브라우저에서 Anthropic API로 **직접** 전송됩니다.
 
 ## 주요 기능
 
@@ -71,8 +90,8 @@ node scripts/gen-license.mjs issue --to 홍길동 --plan lifetime --exp 2027-12-
 - 발급된 키를 구매자 이메일로 보내면, 구매자는 **설정 → 프리미엄 라이선스**에 입력해 활성화합니다.
 - 운영 절차·가격·환불 정책은 [SALES.md](./SALES.md) 참고.
 
-> ⚠️ `licenses/keypair.json`(비밀키)을 잃어버리면 기존 라이선스는 유효하지만 새 키를 발급할 수
-> 없고, 재생성하면 기존 키가 전부 무효화됩니다. 안전한 곳에 백업하세요.
+**주의:** `licenses/keypair.json`(비밀키)을 잃어버리면 기존 라이선스는 유효하지만 새 키를 발급할 수
+없고, 재생성하면 기존 키가 전부 무효화됩니다. 안전한 곳에 백업하세요.
 
 ## 기술 스택
 
@@ -87,3 +106,9 @@ node scripts/gen-license.mjs issue --to 홍길동 --plan lifetime --exp 2027-12-
 ## 라이선스 (소프트웨어)
 
 개인 프로젝트 — 필요 시 라이선스 조항을 추가하세요.
+
+---
+
+<div align="center">
+<sub>Made by <a href="https://github.com/khwee2000">김민수 (@khwee2000)</a> · <a href="https://github.com/INNO-HI-Inc">INNO-HI</a></sub>
+</div>
